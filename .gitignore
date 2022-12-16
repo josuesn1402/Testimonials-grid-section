@@ -16,6 +16,7 @@
 .prettierignore
 
 design/*.jpg
+src/assets/
 notes.md
 
 README-template.md
