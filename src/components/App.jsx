@@ -8,8 +8,7 @@ function App() {
   const changeAvatarDirection = () => {
     const avatars = Object.values(data).map(({ avatar }) => avatar);
     return avatars.map(
-      (avatar) =>
-        (avatar = avatar.replace('/path/to/', '../images/'))
+      (avatar) => (avatar = avatar.replace('/path/to/', '../images/'))
     );
   };
 

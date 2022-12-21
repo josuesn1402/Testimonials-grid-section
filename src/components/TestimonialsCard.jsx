@@ -5,7 +5,7 @@ function TestimonialsCard(props) {
 
   useEffect(() => {
     /* @vite-ignore */
-    import(props.userAvatar).then(img => {
+    import(props.userAvatar).then((img) => {
       setImage(img.default);
     });
   }, []);
