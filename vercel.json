@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "public/**/*", "use": "@vercel/static-build" },
+    { "src": "vite.config.js", "use": "@vercel/vite" }
+  ],
+  "routes": [
+    { "src": "/service-worker.js", "dest": "/service-worker.js" }
+  ]
+}
