@@ -15,18 +15,16 @@
   }
 
   &Card {
-    display: flex;
-    flex-direction: column;
-    gap: 1.6rem;
     border-radius: 6px;
-    padding: 2.4rem 3rem;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+    width: 255px;
   }
 
   &Card:first-child {
     grid-area: first;
     background-color: var(--moderate-violet);
     position: relative;
+    width: unset;
 
     &::after {
       content: '';
@@ -38,32 +36,26 @@
       height: 102px;
       z-index: 1;
     }
-
-    .UserAvatar {
-      border: 1.4px solid var(--light-violet) !important;
-    }
   }
 
   &Card:nth-child(2) {
     grid-area: second;
     background-color: var(--very-dark-grayish-blue);
-    width: 255px;
   }
 
   &Card:nth-child(3) {
     grid-area: third;
     background-color: var(--white);
-    width: 255px;
   }
 
   &Card:nth-child(4) {
     grid-area: fourth;
     background-color: var(--white);
-    width: 255px;
   }
 
   &Card:last-child {
     grid-area: fifth;
     background-color: var(--very-dark-blackish-blue);
+    width: unset;
   }
 }

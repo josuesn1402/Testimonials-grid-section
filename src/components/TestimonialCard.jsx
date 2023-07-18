@@ -17,22 +17,33 @@ const avatars = {
 
 function TestimonialCard(props) {
   const image = avatars[props.index];
+  const cardClass = `TestimonialCard-${props.index}`;
+  const cardClassTitle = `CardTitle-${props.index}`;
+  const cardClassText = `CardText-${props.index}`;
 
   return (
     <>
-      <div className={TestimonialCardStyles.User}>
-        <img
-          className={TestimonialCardStyles.UserAvatar}
-          src={image}
-          alt={`Avatar's ${props.userName}`}
-        />
-        <div className={TestimonialCardStyles.UserInfo}>
-          <h4 className={TestimonialCardStyles.UserName}>{props.userName}</h4>
-          <span>Verified Graduate</span>
+      <div
+        className={`${TestimonialCardStyles.TestimonialCard} ${TestimonialCardStyles[cardClass]}`}
+      >
+        <div className={TestimonialCardStyles.User}>
+          <img
+            className={TestimonialCardStyles.UserAvatar}
+            src={image}
+            alt={`Avatar's ${props.userName}`}
+          />
+          <div className={TestimonialCardStyles.UserInfo}>
+            <h4 className={TestimonialCardStyles.UserName}>{props.userName}</h4>
+            <span className={TestimonialCardStyles.UserMessage}>
+              Verified Graduate
+            </span>
+          </div>
         </div>
+        <h2 className={TestimonialCardStyles.TestimonialTitle}>
+          {props.title}
+        </h2>
+        <p className={TestimonialCardStyles.TestimonialText}>{props.text}</p>
       </div>
-      <h2 className={TestimonialCardStyles.TestimonialTitle}>{props.title}</h2>
-      <p className={TestimonialCardStyles.TestimonialText}>{props.text}</p>
     </>
   );
 }
