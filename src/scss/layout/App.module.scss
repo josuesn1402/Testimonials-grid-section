@@ -1,2 +1,49 @@
 .AppContainer {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.Testimonial {
+  &Container {
+    max-width: 80rem;
+    display: grid;
+    grid-template-areas:
+      'first first second third'
+      'fourth fifth fifth third';
+    gap: 30px;
+  }
+
+  &Card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 6px;
+    padding: 1.5rem 1.875rem;
+  }
+
+  &Card:first-child {
+    grid-area: first;
+    background-color: var(--moderate-violet);
+  }
+
+  &Card:nth-child(2) {
+    grid-area: second;
+    background-color: var(--very-dark-grayish-blue);
+  }
+
+  &Card:nth-child(3) {
+    grid-area: third;
+    background-color: var(--white);
+  }
+
+  &Card:nth-child(4) {
+    grid-area: fourth;
+    background-color: var(--white);
+  }
+
+  &Card:last-child {
+    grid-area: fifth;
+    background-color: var(--very-dark-blackish-blue);
+  }
 }

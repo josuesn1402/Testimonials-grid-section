@@ -1,0 +1,19 @@
+.User {
+  &Info {
+  }
+
+  &Name {
+  }
+}
+
+.Testimonial {
+  &Title {
+    color: var(--white);
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.0125rem;
+  }
+
+  &Text {
+  }
+}
