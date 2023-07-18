@@ -21,7 +21,11 @@ function TestimonialCard(props) {
   return (
     <>
       <div className={TestimonialCardStyles.User}>
-        <img src={image} alt={`Avatar's ${props.userName}`} />
+        <img
+          className={TestimonialCardStyles.UserAvatar}
+          src={image}
+          alt={`Avatar's ${props.userName}`}
+        />
         <div className={TestimonialCardStyles.UserInfo}>
           <h4 className={TestimonialCardStyles.UserName}>{props.userName}</h4>
           <span>Verified Graduate</span>

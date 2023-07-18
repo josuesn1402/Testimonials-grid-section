@@ -1,19 +1,44 @@
 .User {
+  display: flex;
+  column-gap: 15px;
+
+  &Avatar {
+    width: 31px;
+    height: 31px;
+    border-radius: 40px;
+    border: 1.4px solid var(--very-dark-grayish-blue);
+  }
+
   &Info {
+    line-height: 1.6rem;
+  }
+
+  span {
+    color: var(--light-gray);
+    font-size: 1.2rem;
   }
 
   &Name {
+    color: var(--white);
+    font-size: 1.4rem;
+    letter-spacing: -0.364px;
   }
 }
 
 .Testimonial {
   &Title {
     color: var(--white);
-    font-size: 1.25rem;
+    font-size: 2rem;
     font-weight: 600;
-    letter-spacing: 0.0125rem;
+    letter-spacing: 0.2px;
+    position: relative;
+    z-index: 2;
   }
 
   &Text {
+    color: var(--light-gray);
+    font-weight: 500;
+    line-height: 1.8rem;
+    letter-spacing: 0.039px;
   }
 }
